@@ -1,7 +1,7 @@
 import { useGetSignleProject } from "./hooks/projects/project.hook";
-
+import { useParams } from 'react-router-dom'
 const ProjectDetails = () => {
-  const id = "676bf1a2da1408188887a169"; // Replace with a dynamic ID if required
+  const {id} = useParams() ; // Replace with a dynamic ID if required
   const { data } = useGetSignleProject(id);
   
   if (!data) {
